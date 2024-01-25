@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Home page</title>
+</head>
+<body>
+    {% block content %}
+    <style media="screen">
+        .color{
+            background-color: fuchsia;
+        }
+        body{
+            background-color: indigo;
+        }
+    </style>
+    <center>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="color">
+                        <h2 class="text-center text-white">About us</h2>
+                        <p class="text-center text-white">Learn the software course from the expert teacher<br>
+                            Narayana Tech House IT Academy is one of the best training institute in Hyderabad, and we are 
+                            providing the latest software course like Python,Django,Mysql,UI technologies,
+                            DevOps,AWS,Blockchain ,Datascience, and many more. </p>
+                            <ul>
+                                <li class="text-left">Instructor-led Sessions</li>
+                                <li class="text-left">Real-time-scenarios</li>
+                                <li class="text-left">Industry Standard Curriculum</li>
+                                <li class="text-left">Placement Assistance</li>
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-center text-white">Offered Course</h3>
+        <h6 class="text-center text-white">Advance into the latest Technologies course like 
+            Python,Mysql,Django,UI Technologies,DevOps,AWS,Blockchain,DataScience,and other Technology and
+             stay ahead in your career by learning our recommended Course.</h6>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" style="width:18rem;">
+                            <img src="{% static 'images/p1.jpg' %}" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title text-center">Python Training</h5>
+                                <p class="card-text text-center">Python is a high level general-purpose programming language.
+                                    Its design philosophy emphasizes code readability with the use of significant identification. </p>
+
+                                    <center>
+                                        <a href="{% url 'contact' %}" class="btn btn-primary">Contact us</a>
+                                    </center>
+                            </div>
+                        </div>
+                    </div >
+               
+
+            <div class="col-md-4">
+                <div class="card" style="width:18rem;">
+                    <img src="{% static 'images/sql1.jpg' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">MySQL Training</h5>
+                        <p class="card-text text-center">MySQL is an open-source relational database management system.its name is a
+                            combination of "My", the name of co-founder Michael Widenius's daughter My, and "SQL",the acronym for structured Query Language. </p>
+                            <center>
+                                <a href="{% url 'contact' %}" class="btn btn-primary">Contact us</a>
+                            </center>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-md-4">
+                <div class="card" style="width:18rem;">
+                    <img src="{% static 'images/dj1.jpg' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Django Training</h5>
+                        <p class="card-text text-center">Django is a free and open-source,python based web framework that follows the model-view-templates
+                            architectural pattern.it is maintained by the django software foundation,an independent organization established in the US as a 501 non-profit. </p>
+                            <center>
+                                <a href="{% url 'contact' %}" class="btn btn-primary">Contact us</a>
+                            </center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width:18rem;">
+                    <img src="{% static 'images/ui1.jpg' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">UI Technology Training</h5>
+                        <p class="card-text text-center">It is a front-end application view.By using the front-end application view,
+                            user can interact with the application .By using the UI ,user can manipulate and control both the software and hardware. </p>
+                            <center>
+                                <a href="{% url 'contact' %}" class="btn btn-primary">Contact us</a>
+                            </center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width:18rem;">
+                    <img src="{% static 'images/dev1.jpg' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">DevOps Training</h5>
+                        <p class="card-text text-center">DevOps is a set of practices  that combines software development and IT operations.it aims
+                            to shorten the systems development life cycle and provide continuous delivery with high software quality.DevOps is complementary to
+                            agile software development; several DevOps aspects came from the agile way of working.
+                        </p>
+                            <center>
+                                <a href="{% url 'contact' %}" class="btn btn-primary">Contact us</a>
+                            </center>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width:18rem;">
+                    <img src="{% static 'images/aws1.jpg' %}" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">AWS Training</h5>
+                        <p class="card-text text-center">Build ,Deploy, and manage Websites,apps or processes on AWS' secure,
+                            Reliable network.Sign up for a free account and experience AWS' Secure,Reliable,Scalable Services, Performance at scale.
+                        No Upfront Commitment.Easily manage Clusters. </p>
+                            <center>
+                                <a href="{% url 'contact' %}" class="btn btn-primary">Contact us</a>
+                            </center>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+    </center>
+    
+    {% endblock %}
+</body>
+</html>

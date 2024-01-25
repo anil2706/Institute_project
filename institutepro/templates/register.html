@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <title>register page</title>
+     {% include 'cdnlines.html' %}
+</head>
+<style>
+    form{
+        border: 3px green solid;
+        box-shadow: 0px 0px 20px greenyellow;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: blueviolet;
+    }
+    body{
+        background-color: greenyellow;
+    }
+</style>
+<body>
+    <div class="container">
+        <h3 class="text-center">Registration form</h3>
+        <div class="row">
+            <div class="offset-md-3 col-md-6 mt-3">
+                <form method="POST" class="text-light">
+                    {% csrf_token %}
+                    First_Name:{{form.first_name}}<br>
+                    Last Name:{{form.last_name}}<br>
+                    Email:&ensp;&ensp;&ensp;&ensp;{{form.email}}<br>
+                    Username:&ensp;{{form.username}}<br>
+                    Password: &ensp;{{form.password}}<br>
+                    
+                    <input type="submit" value="Register" class="mt-3 btn-warning ml-5">
+                    <input type="reset" value="clear" class="btn-danger ml-5">
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

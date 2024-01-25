@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'cdnlines.html' %}
+    <title>Base</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h1 class="text-center dispaly-3 font-weight-bold text-white">Welcome to Nth</h1>
+   
+    {% block content %}
+    {% endblock %}
+    <h3 class="text-center text-white">Thank you</h3>
+</body>
+</html>

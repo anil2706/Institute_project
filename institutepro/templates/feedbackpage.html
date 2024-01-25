@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Document</title>
+
+<body>
+    {% block content %}
+    <style>
+        body{
+            background-color: teal;
+        }
+    </style>
+    
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-4 col-md-4">
+                <h3 class="text-center text-white"> Give your Feedback</h3>
+                <form method="POST">
+                    {% csrf_token %}
+                    <select name="user">
+                        <option value="{{request.user}}">{{request.user}}</option>
+                    </select>
+                    <textarea name="comment" cols="50" rows="10" placeholder="Comments... " ></textarea>
+                    <center>
+                        <input type="submit" value="submit" class="btn btn-sm btn-success">
+                        <input type="reset" value="cancel" class="btn btn-sm btn-danger">
+                    </center>
+                    {% if data %}
+                    {% for i in data %}
+                    {{i.content}}
+                    <h6 class="text-dark">{{i.date}}<br>{{i.user_name}}</h6>
+                    {% endfor %}
+                    {% else %}
+                    <h3 class="text-dark">No comments Available</h3>
+                    {% endif %}
+                    <blockquote class="blockquote text-center font-weight-bold text-white">
+                    <footer class="blockquote-footer text-primary text-right"><cite title="The Greek Way"></cite>{{request.user}}</footer>
+                    </blockquote>
+                </form>    
+            </div>
+        </div>
+    </div>     
+    {% endblock %}
+</body>
+</html>
